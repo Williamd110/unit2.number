@@ -14,21 +14,20 @@ class Numbers {
   }
   printNumbers() {
     this.data.forEach(number => {
-    console.log(number)
-      
+    console.log(number);
     });
   }
   odds() {
-    return this.data.filter((number) => number % 2 !== 0)
+    return this.data.filter((number) => number % 2 !== 0);
   }
   evens() {
     return this.data.filter((number) => number % 2 === 0);
   }
   sum() {
-    return this.data.reduce((total, number) => total + number, 0)
+    return this.data.reduce((total, number) => total + number, 0);
   }
   product() {
-    return this.data.reduce((total, number) => total * number, 1)
+    return this.data.reduce((total, number) => total * number, 1);
   }
   greaterThan(target) {
     return this.data.filter((number) => number > target);
