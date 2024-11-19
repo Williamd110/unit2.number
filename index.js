@@ -10,28 +10,31 @@ class Numbers {
     }
   }
   count() {
-    //return the count of numbers in data
+    return this.data.length;
   }
   printNumbers() {
-    //print the numbers in data
+    this.data.forEach(number => {
+    console.log(number)
+      
+    });
   }
   odds() {
-    //return the odd numbers in data
+    return this.data.filter((number) => number % 2 !== 0)
   }
   evens() {
-    //return the even numbers in data
+    return this.data.filter((number) => number % 2 === 0);
   }
   sum() {
-    //return the sum of the numbers
+    return this.data.reduce((total, number) => total + number, 0)
   }
   product() {
-    //return the product of the numbers
+    return this.data.reduce((total, number) => total * number, 1)
   }
   greaterThan(target) {
-    //return the numbers greater than the target
+    return this.data.filter((number) => number > target);
   }
   howMany(target) {
-    //return the count of a given number
+   return this.data.filter((number) => number === target).length;
   }
 }
 
@@ -40,11 +43,12 @@ const str = prompt("enter some numbers, like this", "1,2,3,3,5,9");
 
 //create an instance of numbers
 const n1 = new Numbers(str);
-console.log(n1.count()); //returns count of numbers
+console.log("total count" ,n1.count()); //returns count of numbers
+console.log("below is a list of numbers in the string:")
 n1.printNumbers(); //prints the number along with their indexes
-console.log(n1.odds()); //returns odd numbers
-console.log(n1.evens()); //returns even numbers
-console.log(n1.sum()); //returns sum of numbers
-console.log(n1.product()); //returns product of numbers
-console.log(n1.greaterThan(3)); //returns numbers greater than another number
+console.log("odds" ,n1.odds()); //returns odd numbers
+console.log("evens ",n1.evens()); //returns even numbers
+console.log("The sum is ",n1.sum()); //returns sum of numbers
+console.log("The Product is ",n1.product()); //returns product of numbers
+console.log("These are greater than 3 ",n1.greaterThan(3)); //returns numbers greater than another number
 console.log(n1.howMany(3)); //return the count of a specific number
