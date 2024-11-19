@@ -51,4 +51,4 @@ console.log("evens ",n1.evens()); //returns even numbers
 console.log("The sum is ",n1.sum()); //returns sum of numbers
 console.log("The Product is ",n1.product()); //returns product of numbers
 console.log("These are greater than 3 ",n1.greaterThan(3)); //returns numbers greater than another number
-console.log(n1.howMany(3)); //return the count of a specific number
+console.log("There are this many of the requested #: ",n1.howMany(3)); //return the count of a specific number
